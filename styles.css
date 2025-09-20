@@ -1,0 +1,9 @@
+/* .bg-lila {
+  background-color: #6f42c1; /* Lila Bootstrap (purple 600)
+}
+*/
+.bg-lila {
+  background-color: #b19cd9; /* Lila pastel */
+  /* o */
+  background: linear-gradient(90deg, #b19cd9, #d6c2f0); /* Degradado suave */
+}
