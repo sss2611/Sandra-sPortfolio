@@ -1,9 +1,41 @@
-/* .bg-lila {
-  background-color: #6f42c1; /* Lila Bootstrap (purple 600)
-}
-*/
-.bg-lila {
-  background-color: #b19cd9; /* Lila pastel */
-  /* o */
-  background: linear-gradient(90deg, #b19cd9, #d6c2f0); /* Degradado suave */
-}
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: #343a40;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+    .sidebar .nav-link {
+        color: #fff;
+    }
+
+    .sidebar .nav-link:hover {
+        background-color: #495057;
+    }
+
+    .content {
+        margin-left: 250px;
+        padding: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .sidebar {
+            position: relative;
+            height: auto;
+            width: 100%;
+        }
+
+        .content {
+            margin-left: 0;
+        }
+    }

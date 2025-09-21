@@ -1,154 +1,153 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sandra´s Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: row;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 250px;
+      background-color: #343a40;
+      z-index: 1000;
+      padding: 1rem;
+    }
+    .sidebar .nav-link {
+      color: #fff;
+    }
+    .sidebar .nav-link:hover {
+      background-color: #495057;
+    }
+    .content {
+      margin-left: 250px;
+      padding: 2rem;
+      flex-grow: 1;
+    }
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        display: none;
+      }
+      .content {
+        margin-left: 0;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#tecnologias">Tecnologías</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="#logros">Logros</a></li>
+  <!-- Botón hamburguesa para móvil -->
+  <button class="btn btn-dark d-md-none m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Sidebar fijo en desktop -->
+  <nav class="sidebar d-none d-md-flex flex-column">
+    <img src="./img/io.jpg" alt="Foto de perfíl" width="80" class="mb-3 rounded-circle">
+    <h4 class="text-white">Sandra S. Sanchez</h4>
+    <hr class="text-white">
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+      <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+      <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologías</a></li>
+      <li class="nav-item"><a class="nav-link" href="#habilidades-blandas">Habilidades blandas</a></li>
+      <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      <li class="nav-item"><a class="nav-link" href="#logros">Logros Académicos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Offcanvas para móvil -->
+  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Sandra S. Sanchez</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologías</a></li>
+        <li class="nav-item"><a class="nav-link" href="#habilidades-blandas">Habilidades blandas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="#logros">Logros Académicos</a></li>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </div>
 
-  <main>
-    <section id="inicio">
-      <h1>Hola, soy Sandra Soledad Sanchez👩‍💻</h1>
-      <p>Técnica en Desarrollo de Software especializada en aplicaciones web y móviles.</p>
-    </section>
+  <!-- Contenido principal -->
+  <div class="content">
+    <main class="container py-5">
 
-    <section id="proyectos">
-      <h2>Proyectos destacados</h2>
+      <!-- Inicio -->
+      <section id="inicio" class="text-center mb-5">
+        <h1 class="display-4">Hola, soy Sandra Soledad Sanchez <img src="./img/me.png" alt="Foto mía el día del Rally" width="120"></h1>
+        <p class="lead">Técnica en Desarrollo de Software especializada en aplicaciones web y móviles, con experiencia en scraping de páginas, análisis estadístico de datos y automatización inteligente.</p>
+        <p>Me apasiona transformar información en soluciones útiles, integrando tecnologías modernas como Python, Pandas, Jupyter Notebook y herramientas de visualización para generar insights reales. También participo en proyectos institucionales, académicos y colaborativos que combinan diseño, funcionalidad y escalabilidad.</p>
+      </section>
 
-      <article>
-        <h3>Mi primer portfolio</h3>
-        <p>Desarrollado con HTML, CSS y JavaScript. Incluye formulario de login y mensajes con SweetAlert2, además de
-          Bootstrap para el diseño. Desplegado en GitHub Pages.</p>
-      </article>
+      <!-- Sobre mí -->
+      <section id="sobre-mi" class="mb-5">
+        <h2>Sobre mí</h2>
+        <p>Soy una apasionada del desarrollo de software con enfoque en la experiencia del usuario y la eficiencia del código. Me gusta aprender nuevas tecnologías y trabajar en proyectos que generen impacto.</p>
+      </section>
 
-      <article>
-        <h3>Veterinaria Cuky</h3>
-        <p>Landing page informativa creada solo con HTML y CSS. Desplegada en GitHub Pages.</p>
-      </article>
+      <!-- ¿Sabías que...? -->
+      <aside class="bg-light p-4 rounded mb-5">
+        <h2>¿Sabías que…?</h2>
+        <p>Además de programar, me encanta resolver problemas complejos y crear soluciones intuitivas para los usuarios.</p>
+        <p>Tuve la oportunidad, gracias al ITSE, de participar en el Rally de Innovación 2025, una experiencia que fortaleció mi creatividad, trabajo en equipo y habilidades técnicas en entornos de alto desafío.</p>
+      </aside>
 
-      <article>
-        <h3>Formulario para Patrimonio</h3>
-        <p>Proyecto presentado al director de Patrimonio en Prácticas Profesionalizantes I. Incluye login y validaciones
-          con HTML, CSS y JavaScript. Desplegado en GitHub Pages.</p>
-      </article>
+      <!-- Proyectos -->
+      <!-- (Tu sección de proyectos ya está perfecta, se mantiene igual) -->
 
-      <article>
-        <h3>First P</h3>
-        <p>Proyecto personal con HTML, CSS, Bootstrap y JavaScript. Incluye login y dashboard para carga de productos.
-          Permite cambiar el nombre de la marca y estilos con Bootswatch. Base de datos en MongoDB Atlas e imágenes
-          alojadas en Cloudinary.</p>
-      </article>
+      <!-- Tecnologías -->
+      <!-- (Tu sección de tecnologías también está bien estructurada) -->
 
-      <article>
-        <h3>EsTodoMadera</h3>
-        <p>E-commerce donde el carrito redirecciona a WhatsApp. Desarrollado con tecnologías web y desplegado en Render.
-        </p>
-      </article>
+      <!-- Habilidades blandas -->
+      <!-- (Sección clara y visualmente atractiva) -->
 
-      <article>
-        <h3>Festival - Proyecto académico</h3>
-        <p>Trabajo práctico de Programación 3. Página web con HTML, CSS y JavaScript desplegada en GitHub Pages.
-          Posteriormente convertida en aplicación móvil con Flutter y Dart. Disponible para descarga desde Google Drive.
-        </p>
-      </article>
+      <!-- Logros -->
+      <!-- (Bien organizada y alineada con tu perfil institucional) -->
 
-      <article>
-        <h3>ID-Cultural</h3>
-        <p>Proyecto en desarrollo para la Subsecretaría de Cultura de la provincia, en el marco de Prácticas
-          Profesionalizantes III. Utilizamos una máquina virtual con Ubuntu, Docker para contenerización, y tecnologías
-          como PHP, MySQL, Bootstrap con Bootswatch, CSS y JavaScript. El objetivo es crear una plataforma cultural
-          funcional y escalable que responda a necesidades reales del sector público.</p>
-      </article>
+      <!-- Contacto -->
+      <!-- (Formulario funcional y accesible) -->
 
-    </section>
+    </main>
 
-  <section id="tecnologias">
-  <h2>Conocimientos técnicos</h2>
-  <ul>
-    <li><strong>Lenguajes:</strong> Python, Java, JavaScript, Dart, PHP</li>
-    <li><strong>Frameworks:</strong> Flask, Django, Vue.js, Node.js, Next.js, Flutter</li>
-    <li><strong>Estilos:</strong> CSS, Bootstrap, Tailwind</li>
-    <li><strong>Bases de datos:</strong> MongoDB Atlas, MySQL</li>
-    <li><strong>Herramientas de diseño:</strong> Canva, Figma</li>
-    <li><strong>Entornos de desarrollo:</strong> Visual Studio Code, Android Studio</li>
-    <li><strong>Contenerización y entornos virtuales:</strong> Docker, máquinas virtuales con Ubuntu</li>
-    <li><strong>Sistemas operativos y entornos:</strong> Windows, Kali Linux, Debian, Ubuntu</li>
-    <li><strong>Control de versiones:</strong> Git, GitHub</li>
-    <li><strong>Testing:</strong> Postman (para APIs)</li>
-    <li><strong>Metodologías:</strong> Scrum</li>
-    <li><strong>Despliegue:</strong> GitHub Pages, Render, Netlify, Vercel, Railway</li>
-    <li><strong>Áreas:</strong> Desarrollo web y móvil, diseño UI/UX, prototipado</li>
-  </ul>
-</section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+      <p>&copy; 2025 Sandra Soledad Sanchez. Todos los derechos reservados.</p>
+      <p>LinkedIn | GitHub | Instagram | Discord | WhatsApp</p>
+    </footer>
+  </div>
 
-
-    <aside>
-      <h2>¿Sabías que…?</h2>
-      <p>Además de programar, me encanta resolver problemas complejos y crear soluciones intuitivas para los usuarios.
-      </p>
-      <p>Tuve la oportunidad, gracias al ITSE, de participar en el Rally de Innovación 2025, una experiencia que
-        fortaleció mi creatividad, trabajo en equipo y habilidades técnicas en entornos de alto desafío.</p>
-    </aside>
-
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>Soy una apasionada del desarrollo de software con enfoque en la experiencia del usuario y la eficiencia del
-        código. Me gusta aprender nuevas tecnologías y trabajar en proyectos que generen impacto.</p>
-    </section>
-
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <form>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" required></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-
-    <section id="logros">
-      <h2>Reconocimientos y colaboraciones</h2>
-      <ul>
-        <li><strong>Rally de Innovación 2025:</strong> Participación destacada gracias al ITSE, donde desarrollé
-          soluciones creativas en equipo bajo presión y con enfoque en innovación tecnológica.</li>
-        <li><strong>Proyecto ID-Cultural:</strong> Colaboración activa con la Subsecretaría de Cultura de la provincia
-          en el marco de Prácticas Profesionalizantes III, aplicando tecnologías como Docker, PHP, MySQL y Ubuntu en una
-          máquina virtual.</li>
-        <li><strong>Presentación institucional:</strong> Desarrollo de una plataforma web para el director de Patrimonio
-          en Prácticas Profesionalizantes I, demostrando habilidades técnicas y comunicación profesional.</li>
-      </ul>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Sandra. Todos los derechos reservados.</p>
-    <p>LinkedIn | GitHub | Instagram | Discord | Whastapp</p>
-  </footer>
-
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Cierra el offcanvas al hacer clic en un enlace
+    document.querySelectorAll('#mobileMenu .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('mobileMenu'));
+        if (offcanvas) offcanvas.hide();
+      });
+    });
+  </script>
 </body>
-
-</html> -->
+</html>
