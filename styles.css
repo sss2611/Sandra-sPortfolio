@@ -1,41 +1,55 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #343a40;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.sidebar .nav-link {
+    color: #fff;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+/* Compensación visual para scroll hacia secciones */
+section[id],
+article[id],
+div[id] {
+    scroll-margin-top: 100px;
+}
+
+@media (max-width: 768px) {
     body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 250px;
-        background-color: #343a40;
-        overflow-y: auto;
-        z-index: 1000;
-    }
-
-    .sidebar .nav-link {
-        color: #fff;
-    }
-
-    .sidebar .nav-link:hover {
-        background-color: #495057;
+        display: none;
     }
 
     .content {
-        margin-left: 250px;
-        padding: 2rem;
+        margin-left: 0;
     }
-
-    @media (max-width: 768px) {
-        .sidebar {
-            position: relative;
-            height: auto;
-            width: 100%;
-        }
-
-        .content {
-            margin-left: 0;
-        }
-    }
+}

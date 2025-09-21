@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,147 +8,343 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: row;
-    }
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 250px;
-      background-color: #343a40;
-      z-index: 1000;
-      padding: 1rem;
-    }
-    .sidebar .nav-link {
-      color: #fff;
-    }
-    .sidebar .nav-link:hover {
-      background-color: #495057;
-    }
-    .content {
-      margin-left: 250px;
-      padding: 2rem;
-      flex-grow: 1;
-    }
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
-      .sidebar {
-        display: none;
-      }
-      .content {
-        margin-left: 0;
-      }
-    }
-  </style>
 </head>
+
 <body>
 
-  <!-- Botón hamburguesa para móvil -->
   <button class="btn btn-dark d-md-none m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
     <i class="fas fa-bars"></i>
   </button>
 
-  <!-- Sidebar fijo en desktop -->
-  <nav class="sidebar d-none d-md-flex flex-column">
-    <img src="./img/io.jpg" alt="Foto de perfíl" width="80" class="mb-3 rounded-circle">
-    <h4 class="text-white">Sandra S. Sanchez</h4>
-    <hr class="text-white">
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-      <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-      <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologías</a></li>
-      <li class="nav-item"><a class="nav-link" href="#habilidades-blandas">Habilidades blandas</a></li>
-      <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-      <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-      <li class="nav-item"><a class="nav-link" href="#logros">Logros Académicos</a></li>
-    </ul>
-  </nav>
+<nav class="sidebar d-none d-md-flex flex-column p-3 bg-dark text-white" style="width: 250px;">
+  <img src="./img/io.jpg" alt="Foto de perfíl" width="80" class="mb-3 rounded-circle">
+  <h4 class="text-white">Sandra S. Sanchez</h4>
+  <hr class="text-white">
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item"><a class="nav-link text-white" href="#inicio">Inicio</a></li>
 
-  <!-- Offcanvas para móvil -->
-  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="mobileMenu">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title">Sandra S. Sanchez</h5>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="nav nav-pills flex-column">
-        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologías</a></li>
-        <li class="nav-item"><a class="nav-link" href="#habilidades-blandas">Habilidades blandas</a></li>
-        <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-        <li class="nav-item"><a class="nav-link" href="#logros">Logros Académicos</a></li>
+    <!-- Proyectos -->
+    <li class="nav-item dropdown">
+      <button class="nav-link dropdown-toggle text-white bg-transparent border-0 w-100 text-start"
+              data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+        Proyectos
+      </button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a class="dropdown-item" href="#proyectos">Todos</a></li>
+        <li><a class="dropdown-item" href="#primer-portfolio">Mi primer portfolio</a></li>
+        <li><a class="dropdown-item" href="#veterinaria">Veterinaria Cuky</a></li>
+        <li><a class="dropdown-item" href="#vue">VUE</a></li>
+        <li><a class="dropdown-item" href="#flask-django">FLASK y DJANGO</a></li>
+        <li><a class="dropdown-item" href="#patrimonio">Muestra Patrimonio</a></li>
+        <li><a class="dropdown-item" href="#firstp">FirstP</a></li>
+        <li><a class="dropdown-item" href="#tienda">EsTodoMadera-tienda</a></li>
+        <li><a class="dropdown-item" href="#sonidos-ciudad">Sonidos de la Ciudad</a></li>
+        <li><a class="dropdown-item" href="#sonidos-sgo">Sonidos SGO apk</a></li>
+        <li><a class="dropdown-item" href="#id-cultural">ID-Cultural</a></li>
       </ul>
-    </div>
-  </div>
+    </li>
 
-  <!-- Contenido principal -->
+    <!-- Tecnologías -->
+    <li class="nav-item dropdown">
+      <button class="nav-link dropdown-toggle text-white bg-transparent border-0 w-100 text-start"
+              data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+        Tecnologías
+      </button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a class="dropdown-item" href="#lenguajes">Lenguajes</a></li>
+        <li><a class="dropdown-item" href="#frameworks">Frameworks</a></li>
+        <li><a class="dropdown-item" href="#bases-datos">Bases de datos (NoSQL y SQL)</a></li>
+        <li><a class="dropdown-item" href="#diseno-estilos">Diseño y estilos</a></li>
+        <li><a class="dropdown-item" href="#ciencia-datos">Ciencia de datos y ML</a></li>
+        <li><a class="dropdown-item" href="#entornos">Entornos y sistemas</a></li>
+        <li><a class="dropdown-item" href="#testing-despliegue">Testing y despliegue</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item"><a class="nav-link text-white" href="#habilidades-blandas">Habilidades blandas</a></li>
+    <li class="nav-item"><a class="nav-link text-white" href="#sobre-mi">Sobre mí</a></li>
+    <li class="nav-item"><a class="nav-link text-white" href="#contacto">Contacto</a></li>
+    <li class="nav-item"><a class="nav-link text-white" href="#logros">Logros Académicos</a></li>
+  </ul>
+</nav>
+
+
+<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <img src="./img/io.jpg" alt="Foto de perfíl" width="80" class="rounded-circle me-2">
+    <h5 class="offcanvas-title">Sandra S. Sanchez</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item"><a class="nav-link text-white" href="#inicio" data-bs-dismiss="offcanvas">Inicio</a></li>
+
+      <!-- Proyectos -->
+      <li class="nav-item dropdown">
+        <button class="nav-link dropdown-toggle text-white bg-transparent border-0 w-100 text-start"
+                data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+          Proyectos
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="#proyectos" data-bs-dismiss="offcanvas">Todos</a></li>
+          <li><a class="dropdown-item" href="#primer-portfolio" data-bs-dismiss="offcanvas">Mi primer portfolio</a></li>
+          <li><a class="dropdown-item" href="#veterinaria" data-bs-dismiss="offcanvas">Veterinaria Cuky</a></li>
+          <li><a class="dropdown-item" href="#vue" data-bs-dismiss="offcanvas">VUE</a></li>
+          <li><a class="dropdown-item" href="#flask-django" data-bs-dismiss="offcanvas">FLASK y DJANGO</a></li>
+          <li><a class="dropdown-item" href="#patrimonio" data-bs-dismiss="offcanvas">Muestra Patrimonio</a></li>
+          <li><a class="dropdown-item" href="#firstp" data-bs-dismiss="offcanvas">FirstP</a></li>
+          <li><a class="dropdown-item" href="#tienda" data-bs-dismiss="offcanvas">EsTodoMadera-tienda</a></li>
+          <li><a class="dropdown-item" href="#sonidos-ciudad" data-bs-dismiss="offcanvas">Sonidos de la Ciudad</a></li>
+          <li><a class="dropdown-item" href="#sonidos-sgo" data-bs-dismiss="offcanvas">Sonidos SGO apk</a></li>
+          <li><a class="dropdown-item" href="#id-cultural" data-bs-dismiss="offcanvas">ID-Cultural</a></li>
+        </ul>
+      </li>
+
+      <!-- Tecnologías -->
+      <li class="nav-item dropdown">
+        <button class="nav-link dropdown-toggle text-white bg-transparent border-0 w-100 text-start"
+                data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+          Tecnologías
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="#lenguajes" data-bs-dismiss="offcanvas">Lenguajes</a></li>
+          <li><a class="dropdown-item" href="#frameworks" data-bs-dismiss="offcanvas">Frameworks</a></li>
+          <li><a class="dropdown-item" href="#bases-datos" data-bs-dismiss="offcanvas">Bases de datos (NoSQL y SQL)</a></li>
+          <li><a class="dropdown-item" href="#diseno-estilos" data-bs-dismiss="offcanvas">Diseño y estilos</a></li>
+          <li><a class="dropdown-item" href="#ciencia-datos" data-bs-dismiss="offcanvas">Ciencia de datos y ML</a></li>
+          <li><a class="dropdown-item" href="#entornos" data-bs-dismiss="offcanvas">Entornos y sistemas</a></li>
+          <li><a class="dropdown-item" href="#testing-despliegue" data-bs-dismiss="offcanvas">Testing y despliegue</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a class="nav-link text-white" href="#habilidades-blandas" data-bs-dismiss="offcanvas">Habilidades blandas</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#sobre-mi" data-bs-dismiss="offcanvas">Sobre mí</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#contacto" data-bs-dismiss="offcanvas">Contacto</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#logros" data-bs-dismiss="offcanvas">Logros Académicos</a></li>
+    </ul>
+  </div>
+</div>
+
+
   <div class="content">
     <main class="container py-5">
 
       <!-- Inicio -->
       <section id="inicio" class="text-center mb-5">
-        <h1 class="display-4">Hola, soy Sandra Soledad Sanchez <img src="./img/me.png" alt="Foto mía el día del Rally" width="120"></h1>
-        <p class="lead">Técnica en Desarrollo de Software especializada en aplicaciones web y móviles, con experiencia en scraping de páginas, análisis estadístico de datos y automatización inteligente.</p>
-        <p>Me apasiona transformar información en soluciones útiles, integrando tecnologías modernas como Python, Pandas, Jupyter Notebook y herramientas de visualización para generar insights reales. También participo en proyectos institucionales, académicos y colaborativos que combinan diseño, funcionalidad y escalabilidad.</p>
+        <h1 class="display-4">Hola, soy Sandra Soledad Sanchez <img src="./img/me.png" alt="Foto mía el día del Rally"
+            width="120"></h1>
       </section>
 
-      <!-- Sobre mí -->
       <section id="sobre-mi" class="mb-5">
-        <h2>Sobre mí</h2>
-        <p>Soy una apasionada del desarrollo de software con enfoque en la experiencia del usuario y la eficiencia del código. Me gusta aprender nuevas tecnologías y trabajar en proyectos que generen impacto.</p>
+        <h2 class="mb-4">Sobre mí</h2>
+        <p class="lead">Técnica en Desarrollo de Software especializada en aplicaciones web y móviles, análisis
+          estadístico de datos y automatización inteligente.</p>
+        <p>Soy una apasionada del desarrollo de software con enfoque en la experiencia del usuario y la eficiencia del
+          código. Me gusta aprender nuevas tecnologías y trabajar en proyectos que generen impacto.</p>
+        <p>Me motiva transformar información en soluciones útiles, integrando tecnologías modernas como
+          <strong>Python</strong>, <strong>Pandas</strong>, <strong>Jupyter Notebook</strong> y herramientas de
+          visualización para generar <em>insights</em> reales.
+        </p>
+        <p>Participo activamente en proyectos institucionales, académicos y colaborativos que combinan
+          <strong>diseño</strong>, <strong>funcionalidad</strong> y <strong>escalabilidad</strong>, siempre con una
+          visión integral de producto y experiencia de usuario.
+        </p>
       </section>
 
-      <!-- ¿Sabías que...? -->
+
       <aside class="bg-light p-4 rounded mb-5">
         <h2>¿Sabías que…?</h2>
-        <p>Además de programar, me encanta resolver problemas complejos y crear soluciones intuitivas para los usuarios.</p>
-        <p>Tuve la oportunidad, gracias al ITSE, de participar en el Rally de Innovación 2025, una experiencia que fortaleció mi creatividad, trabajo en equipo y habilidades técnicas en entornos de alto desafío.</p>
+        <p>Además de programar, me encanta resolver problemas complejos y crear soluciones intuitivas para los usuarios.
+        </p>
+        <p>Tuve la oportunidad, gracias al ITSE, de participar en el Rally de Innovación 2025, una experiencia que
+          fortaleció mi creatividad, trabajo en equipo y habilidades técnicas en entornos de alto desafío.</p>
       </aside>
 
-      <!-- Proyectos -->
-      <!-- (Tu sección de proyectos ya está perfecta, se mantiene igual) -->
 
-      <!-- Tecnologías -->
-      <!-- (Tu sección de tecnologías también está bien estructurada) -->
+      <section id="habilidades-blandas" class="mb-5">
+        <h2>Habilidades blandas</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><i class="fas fa-comments me-2 text-primary"></i>Comunicación clara y empática en
+            equipos multidisciplinarios</li>
+          <li class="list-group-item"><i class="fas fa-lightbulb me-2 text-warning"></i>Pensamiento crítico y resolución
+            creativa de problemas</li>
+          <li class="list-group-item"><i class="fas fa-bullseye me-2 text-success"></i>Organización metódica y enfoque
+            en
+            objetivos</li>
+          <li class="list-group-item"><i class="fas fa-handshake me-2 text-info"></i>Colaboración activa en entornos
+            académicos e institucionales</li>
+          <li class="list-group-item"><i class="fas fa-sync-alt me-2 text-secondary"></i>Adaptabilidad frente a desafíos
+            técnicos y contextuales</li>
+          <li class="list-group-item"><i class="fas fa-seedling me-2 text-success"></i>Curiosidad constante y apertura
+            al
+            aprendizaje</li>
+        </ul>
+      </section>
 
-      <!-- Habilidades blandas -->
-      <!-- (Sección clara y visualmente atractiva) -->
 
-      <!-- Logros -->
-      <!-- (Bien organizada y alineada con tu perfil institucional) -->
+      <section id="logros" class="mb-5">
+        <h2>Experiencias y colaboraciones</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Presentación institucional:</strong> Desarrollo de una plataforma web para
+            el director de Patrimonio en Prácticas Profesionalizantes I y II.</li>
+          <li class="list-group-item"><strong>Proyecto ID-Cultural:</strong> Colaboración activa con la Subsecretaría de
+            Cultura de la provincia en el marco de Prácticas Profesionalizantes II y III.</li>
+          <li class="list-group-item"><strong>Rally de Innovación 2025:</strong> Participación como asistente gracias al
+            ITSE,
+            donde desarrollamos junto al equipo soluciones creativas, bajo presión y con enfoque en innovación
+            tecnológica.</li>
+        </ul>
+      </section>
 
-      <!-- Contacto -->
-      <!-- (Formulario funcional y accesible) -->
+      <section id="proyectos" class="mb-5">
+        <h2 class="mb-4">Proyectos destacados</h2>
+
+        <article class="mb-4">
+          <h3>Mi primer portfolio</h3>
+          <p>Desarrollado con HTML, CSS y JavaScript. Incluye formulario de login y mensajes con SweetAlert2, además de
+            Bootstrap para el diseño. Desplegado en GitHub Pages.</p>
+        </article>
+
+        <article class="mb-4">
+          <h3>Veterinaria Cuky</h3>
+          <p>Landing page informativa creada solo con HTML y CSS. Desplegada en GitHub Pages.</p>
+        </article>
+
+        <article class="mb-4">
+          <h3>Proyectos con Vue, Flask y Django</h3>
+          <ul>
+            <li><strong>NiñeraxHora:</strong> Aplicación web con Vue.js para control de empleadas domésticas.</li>
+            <li><strong>Patrimonio:</strong> Plataforma institucional con Django y SQLite.</li>
+            <li><strong>Where we going today?</strong> Proyecto Aplicación web con Vue.js tipo red social de lugares visitados por el mundo.</li>
+          </ul>
+        </article>
+
+
+        <article class="mb-4">
+          <h3>Muestra de proyecto para Patrimonio</h3>
+          <p>Proyecto presentado al director de Patrimonio en Prácticas Profesionalizantes I. Incluye login y
+            validaciones
+            con HTML, CSS y JavaScript. Desplegado en GitHub Pages.</p>
+        </article>
+
+        <article class="mb-4">
+          <h3>FirstP</h3>
+          <p>Proyecto personal con HTML, CSS, Bootstrap y JavaScript. Incluye login y dashboard para carga de productos.
+            Permite cambiar el nombre de la marca y estilos con Bootswatch. Base de datos en MongoDB Atlas e imágenes
+            alojadas en Cloudinary.</p>
+          <p>Actualmente funciona como e-commerce orientado a ventas por WhatsApp para clientes de Santiago del Estero y
+            La Banda. Al ser escalable, se proyecta integrar una API de pagos dentro del sitio, con soporte para
+            tarjetas
+            de crédito/débito, Mercado Pago, Go Cuotas y otras pasarelas digitales.</p>
+        </article>
+
+        <article class="mb-4">
+          <h3>EsTodoMadera</h3>
+          <p>E-commerce donde el carrito redirecciona a WhatsApp. Desarrollado con tecnologías web y desplegado en
+            Render.
+          </p>
+        </article>
+
+        <article class="mb-4">
+          <h3>Festival Sonidos de la Ciudad - Proyecto académico</h3>
+          <p>Trabajo práctico de Programación 3. Página web con HTML, CSS y JavaScript desplegada en GitHub Pages.
+            Posteriormente convertida en aplicación móvil con Flutter y Dart. Disponible para descarga desde Google
+            Drive.
+          </p>
+        </article>
+
+        <article class="mb-4">
+          <h3>Sonidos SGO - Reto académico</h3>
+          <p>Migré la página web del Festival Sonidos de la Ciudad a una aplicación móvil utilizando Flutter y Dart.
+            Disponible para descargala desde mi Google Drive.
+          </p>
+        </article>
+
+        <article class="mb-4">
+          <h3>ID-Cultural</h3>
+          <p>Proyecto en desarrollo para la Subsecretaría de Cultura de la provincia, en el marco de Prácticas
+            Profesionalizantes III. Utilizamos una máquina virtual con Ubuntu, Docker para contenerización, y
+            tecnologías
+            como PHP, MySQL, Bootstrap con Bootswatch, CSS y JavaScript. El objetivo es crear una plataforma cultural
+            funcional y escalable que responda a necesidades reales del sector público.</p>
+        </article>
+
+      </section>
+
+
+      <section id="tecnologias" class="mb-5">
+        <h2 class="mb-4">Conocimientos técnicos</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Lenguajes:</strong> Python, Java, JavaScript, Dart, PHP</li>
+              <li class="list-group-item"><strong>Frameworks:</strong> Flask, Django, Vue.js, Node.js, Next.js, Flutter
+              </li>
+              <li class="list-group-item"><strong>Estilos:</strong> CSS, Bootstrap, Tailwind</li>
+              <li class="list-group-item"><strong>Bases de datos no relacionales:</strong> MongoDB Atlas, MongoDB local
+              </li>
+              <li class="list-group-item"><strong>Bases de datos relacionales:</strong> MySQL (XAMPP, Workbench), SQLite
+                (CLI y módulo SQLite3 en Python), PostgreSQL</li>
+              <li class="list-group-item"><strong>Herramientas de diseño:</strong> Canva, Figma</li>
+              <li class="list-group-item"><strong>Ciencia de datos y ML:</strong> NumPy, Pandas, Jupyter Notebook,
+                Google
+                Colab</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Entornos:</strong> VS Code, Android Studio, Docker, Ubuntu</li>
+              <li class="list-group-item"><strong>Sistemas operativos:</strong> Windows, Kali Linux, Debian</li>
+              <li class="list-group-item"><strong>Control de versiones:</strong> Git, GitHub</li>
+              <li class="list-group-item"><strong>Testing:</strong> Postman, Thunder Client</li>
+              <li class="list-group-item"><strong>Despliegue:</strong> GitHub Pages, Render, Netlify, Vercel, Railway
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="mb-5">
+        <h2>Contacto</h2>
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="col-12">
+            <label for="mensaje" class="form-label">Mensaje:</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </form>
+      </section>
 
     </main>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4 mt-auto">
       <p>&copy; 2025 Sandra Soledad Sanchez. Todos los derechos reservados.</p>
-      <p>LinkedIn | GitHub | Instagram | Discord | WhatsApp</p>
+      <p>
+  <a href="https://linkedin.com/in/sandrasanchez" class="text-white me-3">LinkedIn</a> |
+  <a href="https://github.com/sandrasanchez" class="text-white me-3">GitHub</a> |
+  <a href="https://instagram.com/sandrasanchez" class="text-white me-3">Instagram</a> |
+  <a href="#" class="text-white me-3">Discord</a> |
+  <a href="https://wa.me/549XXXXXXXXXX" class="text-white">WhatsApp</a>
+</p>
+
     </footer>
   </div>
 
   <!-- Scripts -->
   <script src="main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Cierra el offcanvas al hacer clic en un enlace
-    document.querySelectorAll('#mobileMenu .nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('mobileMenu'));
-        if (offcanvas) offcanvas.hide();
-      });
-    });
-  </script>
+
 </body>
+
 </html>
