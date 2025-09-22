@@ -14,7 +14,7 @@ body {
     left: 0;
     height: 100vh;
     width: 250px;
-    background-color: #343a40;
+    background-color: #60c98c;
     z-index: 1000;
     padding: 1rem;
 }
@@ -24,7 +24,7 @@ body {
 }
 
 .sidebar .nav-link:hover {
-    background-color: #495057;
+    background-color: #72cf8a;
 }
 
 .content {
