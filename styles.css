@@ -127,3 +127,20 @@ div[id] {
     font-size: 0.75rem;
     color: #555;
 }
+
+/* Proyectos */
+.card-proyecto {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-proyecto .row {
+    height: 100%;
+}
+
+.card-proyecto img {
+    height: 100%;
+    object-fit: cover;
+}
