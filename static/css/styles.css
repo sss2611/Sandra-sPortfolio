@@ -31,6 +31,9 @@ body {
     margin-left: 250px;
     padding: 2rem;
     flex-grow: 1;
+    box-sizing: border-box;
+    width: 100vw;
+    max-width: 100%;
 }
 
 section[id],
@@ -57,7 +60,7 @@ div[id] {
 #inicio {
     text-align: center;
     padding: 5rem 0;
-    background-color: #f8f9fa;
+    background-color: rgb(247, 250, 221);
     border-bottom: 1px solid #dee2e6;
 }
 
@@ -68,7 +71,7 @@ div[id] {
 }
 
 #inicio img {
-    width: 160px;
+    width: 260px;
     border-radius: 50%;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     margin-bottom: 1rem;
