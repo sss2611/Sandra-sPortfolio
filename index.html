@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sandra´s Portfolio</title>
   <link rel="shortcut icon" href="./img/logos/SA.png" type="image/x-icon">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./static/css/styles.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-  <nav class="sidebar d-none d-md-flex flex-column p-3 bg-dark text-white" style="width: 250px;">
+  <nav class="sidebar d-none d-md-flex flex-column p-3 bg-dark text-white" style="width: 270px;">
     <img src="./img/me.png" alt="Foto de perfíl" width="80" class="mb-3 rounded-circle">
     <h4 class="text-white">Sandra S. Sanchez</h4>
     <hr class="text-white">
@@ -30,13 +30,14 @@
           <li><a class="dropdown-item" href="#proyectos">Todos</a></li>
           <li><a class="dropdown-item" href="#primer-portfolio">Mi primer portfolio</a></li>
           <li><a class="dropdown-item" href="#veterinaria">Veterinaria Cuky</a></li>
-          <li><a class="dropdown-item" href="#vue">VUE, FLASK y DJANGO</a></li>
+          <li><a class="dropdown-item" href="#varios">React + Vite, Node.Js y Django</a></li>
           <li><a class="dropdown-item" href="#patrimonio">Muestra Patrimonio</a></li>
           <li><a class="dropdown-item" href="#firstp">FirstP</a></li>
           <li><a class="dropdown-item" href="#tienda">EsTodoMadera-tienda</a></li>
           <li><a class="dropdown-item" href="#sonidos-ciudad">Sonidos de la Ciudad</a></li>
           <li><a class="dropdown-item" href="#sonidos-sgo">Sonidos SGO apk</a></li>
           <li><a class="dropdown-item" href="#id-cultural">ID-Cultural</a></li>
+          <li><a class="dropdown-item" href="#tachy">Tachy - REGroup</a></li>
         </ul>
       </li>
 
@@ -67,20 +68,17 @@
   <div class="content">
     <main class="container py-5">
 
-      <section id="inicio" class="text-center py-5 bg-light border-bottom">
+      <!-- INICIO -->
+      <section id="inicio">
         <div class="container">
           <div class="d-flex flex-column align-items-center">
-            <img src="./img/io.jpg" alt="Foto de perfil" width="160"
-              class="rounded-circle shadow-lg mb-3 border border-4" style="border-color: #bfa23f;">
+            <img src="./img/io.jpg" alt="Foto de perfil" class="foto-perfil">
 
-            <h1 class="display-4 fw-bold text-dark" style="font-family: 'Playfair Display', serif;">
-              Sandra Soledad Sanchez
-            </h1>
+            <h1>Sandra Soledad Sanchez</h1>
 
-            <p class="fs-5 text-secondary mb-1" style="font-family: 'Georgia', serif;">
-              Desarrolladora de Software</p>
+            <p class="fs-5 subtitulo">Desarrolladora de Software</p>
 
-            <p class="lead text-dark px-3 px-md-5" style="max-width: 720px;">
+            <p class="lead descripcion">
               Especializada en aplicaciones web y móviles, automatización inteligente y experiencia de usuario centrada
               en soluciones escalables. Migro aplicaciones entre lenguajes, conecto APIs externas y diseño componentes
               modernos, responsivos y reutilizables.
@@ -102,6 +100,7 @@
         </div>
       </section>
 
+      <!-- SOBRE MI -->
       <section id="sobre-mi" class="mb-5">
         <div class="card border-0 shadow-lg" style="background-color: #fff8e1; border-radius: 0.75rem;">
           <div class="card-header text-center text-dark"
@@ -122,112 +121,114 @@
         </div>
       </section>
 
-      <aside class="bg-light p-4 rounded shadow-sm mb-5"
-        style="font-family: 'Georgia', serif; border-left: 5px solid #bfa23f;">
-        <h2 class="text-dark fw-bold mb-3" style="font-family: 'Playfair Display', serif;">¿Sabías que…?</h2>
-        <p class="text-dark">Además de programar, me encanta resolver problemas complejos y crear soluciones intuitivas
-          para los usuarios.</p>
-        <p class="text-dark">Tuve la oportunidad, gracias al <strong>ITSE</strong>, de participar en el <em>Rally de
-            Innovación 2025</em>, una experiencia que fortaleció mi creatividad, trabajo en equipo y habilidades
-          técnicas en entornos de alto desafío.</p>
+      <!-- SABÍAS QUÉ? -->
+      <aside class="sabias-que mb-5">
+        <h2 class="sabias-que-titulo">¿Sabías que…?</h2>
+        <p>Además de programar, me encanta resolver problemas complejos y crear soluciones intuitivas para los usuarios.
+        </p>
+        <p>Tuve la oportunidad, gracias al <strong>ITSE</strong>, de participar en el <em>Rally de Innovación 2025</em>,
+          una experiencia que fortaleció mi creatividad, trabajo en equipo y habilidades técnicas en entornos de alto
+          desafío.
+        </p>
       </aside>
 
+      <!-- HABILIDADES BLANDAS-->
       <section id="habilidades-blandas" class="mb-5">
-        <h2 class="mb-4 text-center text-dark">Habilidades blandas</h2>
+        <h2 class="habilidades-titulo">Habilidades blandas</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
           <div class="col">
-            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #fff8e1;">
-              <div class="card-body">
-                <i class="fas fa-comments fa-2x mb-3" style="color: #bfa23f;"></i>
-                <h5 class="card-title text-dark">Comunicación empática</h5>
-                <p class="card-text text-secondary">Claridad y empatía en equipos multidisciplinarios.</p>
-              </div>
+            <div class="habilidad-card">
+              <i class="fas fa-comments fa-2x mb-3 habilidad-icono"></i>
+              <h5 class="card-title">Comunicación empática</h5>
+              <p class="card-text">Claridad y empatía en equipos multidisciplinarios.</p>
             </div>
           </div>
 
           <div class="col">
-            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #fff8e1;">
-              <div class="card-body">
-                <i class="fas fa-lightbulb fa-2x mb-3" style="color: #bfa23f;"></i>
-                <h5 class="card-title text-dark">Pensamiento crítico</h5>
-                <p class="card-text text-secondary">Resolución creativa de problemas complejos.</p>
-              </div>
+            <div class="habilidad-card">
+              <i class="fas fa-lightbulb fa-2x mb-3 habilidad-icono"></i>
+              <h5 class="card-title">Pensamiento crítico</h5>
+              <p class="card-text">Resolución creativa de problemas complejos.</p>
             </div>
           </div>
+
           <div class="col">
-            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #fff8e1;">
-              <div class="card-body">
-                <i class="fas fa-bullseye fa-2x mb-3" style="color: #bfa23f;"></i>
-                <h5 class="card-title text-dark">Organización y enfoque</h5>
-                <p class="card-text text-secondary">Metodología clara y orientación a objetivos.</p>
-              </div>
+            <div class="habilidad-card">
+              <i class="fas fa-bullseye fa-2x mb-3 habilidad-icono"></i>
+              <h5 class="card-title">Organización y enfoque</h5>
+              <p class="card-text">Metodología clara y orientación a objetivos.</p>
             </div>
           </div>
+
           <div class="col">
-            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #fff8e1;">
-              <div class="card-body">
-                <i class="fas fa-handshake fa-2x mb-3" style="color: #bfa23f;"></i>
-                <h5 class="card-title text-dark">Colaboración activa</h5>
-                <p class="card-text text-secondary">Trabajo en equipo en entornos académicos e institucionales.</p>
-              </div>
+            <div class="habilidad-card">
+              <i class="fas fa-handshake fa-2x mb-3 habilidad-icono"></i>
+              <h5 class="card-title">Colaboración activa</h5>
+              <p class="card-text">Trabajo en equipo en entornos académicos e institucionales.</p>
             </div>
           </div>
+
           <div class="col">
-            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #fff8e1;">
-              <div class="card-body">
-                <i class="fas fa-sync-alt fa-2x mb-3" style="color: #bfa23f;"></i>
-                <h5 class="card-title text-dark">Adaptabilidad</h5>
-                <p class="card-text text-secondary">Flexibilidad frente a desafíos técnicos y contextuales.</p>
-              </div>
+            <div class="habilidad-card">
+              <i class="fas fa-sync-alt fa-2x mb-3 habilidad-icono"></i>
+              <h5 class="card-title">Adaptabilidad</h5>
+              <p class="card-text">Flexibilidad frente a desafíos técnicos y contextuales.</p>
             </div>
           </div>
+
           <div class="col">
-            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #fff8e1;">
-              <div class="card-body">
-                <i class="fas fa-seedling fa-2x mb-3" style="color: #bfa23f;"></i>
-                <h5 class="card-title text-dark">Curiosidad constante</h5>
-                <p class="card-text text-secondary">Apertura al aprendizaje y mejora continua.</p>
-              </div>
+            <div class="habilidad-card">
+              <i class="fas fa-seedling fa-2x mb-3 habilidad-icono"></i>
+              <h5 class="card-title">Curiosidad constante</h5>
+              <p class="card-text">Apertura al aprendizaje y mejora continua.</p>
             </div>
           </div>
+
         </div>
       </section>
 
+      <!-- LOGROS -->
       <section id="logros" class="mb-5">
-        <h2 class="mb-4 text-center text-dark">Experiencias y colaboraciones</h2>
+        <h2 class="logros-titulo">Experiencias y colaboraciones</h2>
         <div class="timeline">
+
           <div class="timeline-item">
             <div class="timeline-icon bg-gold text-white"><i class="fas fa-globe"></i></div>
             <div class="timeline-content">
-              <h5 class="fw-bold text-gold">Presentación institucional</h5>
+              <h5 class="timeline-titulo">Presentación institucional</h5>
               <p>Desarrollo de una plataforma web para el director de Patrimonio en Prácticas Profesionalizantes I y II.
               </p>
             </div>
           </div>
+
           <div class="timeline-item">
             <div class="timeline-icon bg-gold text-white"><i class="fas fa-university"></i></div>
             <div class="timeline-content">
-              <h5 class="fw-bold text-gold">Proyecto ID-Cultural</h5>
+              <h5 class="timeline-titulo">Proyecto ID-Cultural</h5>
               <p>Colaboración activa con la Subsecretaría de Cultura de la provincia en el marco de Prácticas
                 Profesionalizantes II y III.</p>
             </div>
           </div>
+
           <div class="timeline-item">
             <div class="timeline-icon bg-gold text-white"><i class="fas fa-lightbulb"></i></div>
             <div class="timeline-content">
-              <h5 class="fw-bold text-gold">Rally de Innovación 2025</h5>
+              <h5 class="timeline-titulo">Rally de Innovación 2025</h5>
               <p>Participación como asistente gracias al ITSE, desarrollando soluciones creativas bajo presión y con
                 enfoque en innovación tecnológica.</p>
             </div>
           </div>
+
         </div>
       </section>
 
+      <!-- PROYECTOS -->
       <section id="proyectos" class="mb-5">
         <h2 class="mb-4 text-center fw-bold" style="color: #2c3e50;">Proyectos destacados</h2>
 
         <!-- Mi primer portfolio -->
-        <div class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="primer-portfolio" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center">
             <div class="col-md-6">
               <img src="img/portfolio.jpg" class="img-fluid rounded-start shadow-sm" alt="Mi primer portfolio"
@@ -249,7 +250,7 @@
         </div>
 
         <!-- Veterinaria Cuky -->
-        <div class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="veterinaria" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center flex-md-row-reverse">
             <div class="col-md-6">
               <img src="img/portfolio.jpg" class="img-fluid rounded-end shadow-sm" alt="Veterinaria Cuky"
@@ -272,7 +273,7 @@
         </div>
 
         <!-- React + Vite, Node.Js y Django -->
-        <div class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="varios" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center">
             <div class="col-md-6">
               <img src="img/portfolio.jpg" class="img-fluid rounded-start shadow-sm"
@@ -304,7 +305,7 @@
         </div>
 
         <!-- Proyecto Patrimonio -->
-        <div class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="patrimonio" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center flex-md-row-reverse">
             <div class="col-md-6">
               <img src="img/portfolio.jpg" class="img-fluid rounded-end shadow-sm" alt="Proyecto Patrimonio"
@@ -325,7 +326,7 @@
         </div>
 
         <!-- Festival Sonidos de la Ciudad  -->
-        <div class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="sonidos-ciudad" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center">
             <div class="col-md-6">
               <img src="img/festival.jpg" class="img-fluid rounded-start shadow-sm" alt="Festival Sonidos de la Ciudad "
@@ -348,7 +349,7 @@
         </div>
 
         <!-- Sonidos SGO - Reto académico -->
-        <div class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="sonidos-sgo" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center flex-md-row-reverse">
             <div class="col-md-6">
               <img src="img/sonidosSGO.jpg" class="img-fluid rounded-end shadow-sm" alt="Sonidos SGO - Reto académico"
@@ -368,7 +369,7 @@
         </div>
 
         <!-- FirstP -->
-        <div class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="firstp" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center">
             <div class="col-md-6">
               <img src="img/firstP.jpg" class="img-fluid rounded-start shadow-sm" alt="FirstP"
@@ -399,7 +400,7 @@
         </div>
 
         <!-- EsTodoMadera -->
-        <div class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="tienda" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center flex-md-row-reverse">
             <div class="col-md-6">
               <img src="img/esTodoMadera.jpg" class="img-fluid rounded-end shadow-sm" alt="EsTodoMadera"
@@ -410,10 +411,11 @@
               <p class="text-dark">E-commerce donde el carrito redirecciona a WhatsApp. Desarrollado con tecnologías
                 web
                 y desplegado en Render.</p>
-                <a href="https://es-todo-madera-tienda.vercel.app/" target="_blank" class="btn btn-outline-dark mt-3">
+              <a href="https://es-todo-madera-tienda.vercel.app/" target="_blank" class="btn btn-outline-dark mt-3">
                 Visitar la Página
               </a>
-              <a href="https://github.com/sss2611/esTodoMadera-Tienda" target="_blank" class="btn btn-outline-dark mt-3">
+              <a href="https://github.com/sss2611/esTodoMadera-Tienda" target="_blank"
+                class="btn btn-outline-dark mt-3">
                 Ver Repositorio
               </a>
             </div>
@@ -421,7 +423,7 @@
         </div>
 
         <!-- ID-Cultural -->
-        <div class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="id-cultural" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center">
             <div class="col-md-6">
               <img src="img/portfolio.jpg" class="img-fluid rounded-start shadow-sm" alt="ID-Cultural"
@@ -444,7 +446,7 @@
         </div>
 
         <!-- Tachy -->
-        <div class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="tachy" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center flex-md-row-reverse">
             <div class="col-md-6">
               <img src="img/logos/Tachy.jpg" class="img-fluid rounded-end shadow-sm" alt="Tachy"
@@ -505,11 +507,12 @@
         </div>
       </section>
 
+      <!-- TECNOLOGÍAS -->
       <section id="tecnologias" class="mb-5">
         <h2 class="mb-4 text-center text-dark">Conocimientos técnicos</h2>
         <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4 justify-content-center">
 
-          <div class="col">
+          <div class="col" id="lenguajes">
             <div class="tech-circle-card">
               <i class="fas fa-code fa-2x text-dark"></i>
               <h6 class="mt-2">Lenguajes</h6>
@@ -517,7 +520,7 @@
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" id="frameworks">
             <div class="tech-circle-card">
               <i class="fas fa-layer-group fa-2x text-secondary"></i>
               <h6 class="mt-2">Frameworks</h6>
@@ -525,7 +528,7 @@
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" id="diseno-estilos">
             <div class="tech-circle-card">
               <i class="fas fa-paint-brush fa-2x text-info"></i>
               <h6 class="mt-2">Estilos</h6>
@@ -533,7 +536,7 @@
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" id="bases-datos">
             <div class="tech-circle-card">
               <i class="fas fa-database fa-2x text-success"></i>
               <h6 class="mt-2">Bases NoSQL</h6>
@@ -549,7 +552,7 @@
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" id="ciencia-datos">
             <div class="tech-circle-card">
               <i class="fas fa-chart-line fa-2x text-warning"></i>
               <h6 class="mt-2">Ciencia de datos</h6>
@@ -557,7 +560,7 @@
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" id="entornos">
             <div class="tech-circle-card">
               <i class="fas fa-laptop-code fa-2x text-dark"></i>
               <h6 class="mt-2">Entornos</h6>
@@ -565,7 +568,7 @@
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" id="sistemas">
             <div class="tech-circle-card">
               <i class="fas fa-desktop fa-2x text-secondary"></i>
               <h6 class="mt-2">Sistemas</h6>
@@ -573,7 +576,7 @@
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" id="testing-despliegue">
             <div class="tech-circle-card">
               <i class="fas fa-vial fa-2x text-info"></i>
               <h6 class="mt-2">Testing</h6>
@@ -581,7 +584,7 @@
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" id="versiones">
             <div class="tech-circle-card">
               <i class="fab fa-git-alt fa-2x text-dark"></i>
               <h6 class="mt-2">Versiones</h6>
@@ -592,30 +595,30 @@
         </div>
       </section>
 
+      <!-- CONTACTO -->
       <section id="contacto" class="mb-5">
         <div class="container">
-          <div class="card shadow-lg border-0" style="background-color: #f8f9fa; border-radius: 1rem;">
-            <div class="card-header text-center text-white" style="background-color: #2c3e50;">
+          <div class="card shadow-lg border-0 bg-light rounded-4">
+            <div class="card-header bg-dark text-white text-center rounded-top-4">
               <h2 class="mb-0 fw-bold">Contacto</h2>
             </div>
             <div class="card-body px-4 py-5">
               <form id="contact-form" class="row g-4">
                 <div class="col-md-6">
-                  <label for="nombre" class="form-label fw-semibold text-dark">Nombre</label>
+                  <label for="nombre" class="form-label fw-semibold">Nombre</label>
                   <input type="text" class="form-control rounded-pill border-dark" id="nombre" name="nombre" required>
                 </div>
                 <div class="col-md-6">
-                  <label for="email" class="form-label fw-semibold text-dark">Email</label>
+                  <label for="email" class="form-label fw-semibold">Email</label>
                   <input type="email" class="form-control rounded-pill border-dark" id="email" name="email" required>
                 </div>
                 <div class="col-12">
-                  <label for="mensaje" class="form-label fw-semibold text-dark">Mensaje</label>
+                  <label for="mensaje" class="form-label fw-semibold">Mensaje</label>
                   <textarea class="form-control rounded-4 border-dark" id="mensaje" name="mensaje" rows="5"
                     required></textarea>
                 </div>
                 <div class="col-12 text-center">
-                  <button type="submit" id="submit-btn" class="btn px-5 py-2 rounded-pill text-white"
-                    style="background-color: #2c3e50;">
+                  <button type="submit" id="submit-btn" class="btn btn-dark px-5 py-2 rounded-pill">
                     <i class="fas fa-paper-plane me-2"></i>Enviar mensaje
                   </button>
                   <div id="form-status" class="mt-3 fw-semibold"></div>
@@ -625,6 +628,7 @@
           </div>
         </div>
       </section>
+
 
     </main>
 
@@ -641,8 +645,10 @@
     </footer>
   </div>
 
-  <script src="main.js"></script>
+  <script src="./static/js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 
 </html>
