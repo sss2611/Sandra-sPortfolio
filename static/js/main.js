@@ -29,3 +29,28 @@ document.addEventListener('DOMContentLoaded', function () {
         form.reset(); // Limpia el formulario
     });
 });
+
+// MENU MOVIL
+const toggle = document.getElementById('menuToggle');
+const icons = document.querySelectorAll('.icon-item');
+let active = false;
+
+toggle.addEventListener('click', () => {
+    active = !active;
+    icons.forEach(icon => {
+        const angleDeg = parseFloat(icon.style.getPropertyValue('--angle'));
+        const angleRad = angleDeg * (Math.PI / 180);
+        const radius = 100;
+
+        if (active) {
+            const x = -radius * Math.cos(angleRad);
+            const y = -radius * Math.sin(angleRad);
+            icon.style.transform = `translate(${x}px, ${y}px)`;
+            icon.style.opacity = '1';
+        } else {
+            icon.style.transform = `translate(0, 0)`;
+            icon.style.opacity = '0';
+        }
+    });
+});
+
