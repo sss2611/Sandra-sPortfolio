@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
   <nav class="sidebar d-none d-md-flex flex-column p-3 bg-dark text-white" style="width: 270px;">
     <img src="./img/me.png" alt="Foto de perfíl" width="80" class="mb-3 rounded-circle">
     <h4 class="text-white">Sandra S. Sanchez</h4>
@@ -63,6 +62,40 @@
       <li class="nav-item"><a class="nav-link text-white" href="#contacto">Contacto</a></li>
       <li class="nav-item"><a class="nav-link text-white" href="#logros">Logros Académicos</a></li>
     </ul>
+
+    <section id="promociones" class="carousel-container">
+      <div id="promoCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div
+              class="promo-content d-flex flex-column justify-content-center align-items-center text-center text-white">
+              <img src="static/img/promos/1.jpeg" class="promo-image mb-4" alt="Promoción 1">
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div
+              class="promo-content d-flex flex-column justify-content-center align-items-center text-center text-white">
+              <img src="static/img/productos/racks/2.jpg" class="promo-image mb-4" alt="Promoción 2">
+
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
   </nav>
 
   <div class="content">
@@ -228,11 +261,12 @@
         <h2 class="mb-4 text-center fw-bold" style="color: #2c3e50;">Proyectos destacados</h2>
 
         <!-- Mi primer portfolio -->
-        <div id="primer-portfolio" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="primer-portfolio" class="card card-proyecto mb-5 border-0 shadow-sm"
+          style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center">
             <div class="col-md-6">
-              <img src="img/portfolio.jpg" class="img-fluid rounded-start shadow-sm" alt="Mi primer portfolio"
-                style="border-radius: 1rem 0 0 1rem;">
+              <img src="./img/proyectos/portfolio.png" class="img-fluid rounded-start shadow-sm"
+                alt="Mi primer portfolio" style="border-radius: 1rem 0 0 1rem;">
             </div>
             <div class="col-md-6 p-4">
               <h3 class="fw-bold mb-3" style="color: #2c3e50;">Mi primer portfolio</h3>
@@ -250,10 +284,11 @@
         </div>
 
         <!-- Veterinaria Cuky -->
-        <div id="veterinaria" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="veterinaria" class="card card-proyecto mb-5 border-0 shadow-sm"
+          style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center flex-md-row-reverse">
             <div class="col-md-6">
-              <img src="img/portfolio.jpg" class="img-fluid rounded-end shadow-sm" alt="Veterinaria Cuky"
+              <img src="./img/proyectos/veterinaria.png" class="img-fluid rounded-end shadow-sm" alt="Veterinaria Cuky"
                 style="border-radius: 0 1rem 1rem 0;">
             </div>
             <div class="col-md-6 p-4">
@@ -273,7 +308,8 @@
         </div>
 
         <!-- React + Vite, Node.Js y Django -->
-        <div id="varios" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="varios" class="card card-proyecto mb-5 border-0 shadow-sm"
+          style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center">
             <div class="col-md-6">
               <img src="img/portfolio.jpg" class="img-fluid rounded-start shadow-sm"
@@ -305,11 +341,12 @@
         </div>
 
         <!-- Proyecto Patrimonio -->
-        <div id="patrimonio" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="patrimonio" class="card card-proyecto mb-5 border-0 shadow-sm"
+          style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center flex-md-row-reverse">
             <div class="col-md-6">
-              <img src="img/portfolio.jpg" class="img-fluid rounded-end shadow-sm" alt="Proyecto Patrimonio"
-                style="border-radius: 0 1rem 1rem 0;">
+              <img src="./img/proyectos/patrimonio.png" class="img-fluid rounded-end shadow-sm"
+                alt="Proyecto Patrimonio" style="border-radius: 0 1rem 1rem 0;">
             </div>
             <div class="col-md-6 p-4">
               <h3 class="fw-bold mb-3" style="color: #2c3e50;">Muestra de proyecto para Patrimonio</h3>
@@ -326,11 +363,12 @@
         </div>
 
         <!-- Festival Sonidos de la Ciudad  -->
-        <div id="sonidos-ciudad" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="sonidos-ciudad" class="card card-proyecto mb-5 border-0 shadow-sm"
+          style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center">
             <div class="col-md-6">
-              <img src="img/festival.jpg" class="img-fluid rounded-start shadow-sm" alt="Festival Sonidos de la Ciudad "
-                style="border-radius: 1rem 0 0 1rem;">
+              <img src="./img/proyectos/festival.png" class="img-fluid rounded-start shadow-sm"
+                alt="Festival Sonidos de la Ciudad " style="border-radius: 1rem 0 0 1rem;">
             </div>
             <div class="col-md-6 p-4">
               <h3 class="fw-bold mb-3" style="color: #2c3e50;">Festival Sonidos de la Ciudad </h3>
@@ -349,7 +387,8 @@
         </div>
 
         <!-- Sonidos SGO - Reto académico -->
-        <div id="sonidos-sgo" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="sonidos-sgo" class="card card-proyecto mb-5 border-0 shadow-sm"
+          style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center flex-md-row-reverse">
             <div class="col-md-6">
               <img src="img/sonidosSGO.jpg" class="img-fluid rounded-end shadow-sm" alt="Sonidos SGO - Reto académico"
@@ -369,10 +408,11 @@
         </div>
 
         <!-- FirstP -->
-        <div id="firstp" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="firstp" class="card card-proyecto mb-5 border-0 shadow-sm"
+          style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center">
             <div class="col-md-6">
-              <img src="img/firstP.jpg" class="img-fluid rounded-start shadow-sm" alt="FirstP"
+              <img src="./img/proyectos/firstp.png" class="img-fluid rounded-start shadow-sm" alt="FirstP"
                 style="border-radius: 1rem 0 0 1rem;">
             </div>
             <div class="col-md-6 p-4">
@@ -400,10 +440,11 @@
         </div>
 
         <!-- EsTodoMadera -->
-        <div id="tienda" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="tienda" class="card card-proyecto mb-5 border-0 shadow-sm"
+          style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center flex-md-row-reverse">
             <div class="col-md-6">
-              <img src="img/esTodoMadera.jpg" class="img-fluid rounded-end shadow-sm" alt="EsTodoMadera"
+              <img src="./img/proyectos/esTodoMadera.png" class="img-fluid rounded-end shadow-sm" alt="EsTodoMadera"
                 style="border-radius: 0 1rem 1rem 0;">
             </div>
             <div class="col-md-6 p-4">
@@ -423,10 +464,11 @@
         </div>
 
         <!-- ID-Cultural -->
-        <div id="id-cultural" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="id-cultural" class="card card-proyecto mb-5 border-0 shadow-sm"
+          style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center">
             <div class="col-md-6">
-              <img src="img/portfolio.jpg" class="img-fluid rounded-start shadow-sm" alt="ID-Cultural"
+              <img src="img/proyectos/idcultural.png" class="img-fluid rounded-start shadow-sm" alt="ID-Cultural"
                 style="border-radius: 1rem 0 0 1rem;">
             </div>
             <div class="col-md-6 p-4">
@@ -446,10 +488,11 @@
         </div>
 
         <!-- Tachy -->
-        <div id="tachy" class="card card-proyecto mb-5 border-0 shadow-sm" style="background-color: #fff8e1; border-radius: 1rem;">
+        <div id="tachy" class="card card-proyecto mb-5 border-0 shadow-sm"
+          style="background-color: #fff8e1; border-radius: 1rem;">
           <div class="row g-0 align-items-center flex-md-row-reverse">
             <div class="col-md-6">
-              <img src="img/logos/Tachy.jpg" class="img-fluid rounded-end shadow-sm" alt="Tachy"
+              <img src="img/proyectos/tachy.png" class="img-fluid rounded-end shadow-sm" alt="Tachy"
                 style="border-radius: 0 1rem 1rem 0;">
             </div>
             <div class="col-md-6 p-4">
@@ -458,7 +501,7 @@
               <button type="button" class="btn btn-outline-dark mt-3" data-bs-toggle="modal"
                 data-bs-target="#modalTachy">Ver Video</button>
               <a href="https://regroup-9xme.onrender.com/" target="_blank" class="btn btn-outline-dark mt-3">
-                Ver más
+                Visitar la Página
               </a>
               </a>
               <a href="https://github.com/sss2611/REGroup" target="_blank" class="btn btn-outline-dark mt-3">
@@ -629,19 +672,24 @@
         </div>
       </section>
 
-
     </main>
 
     <footer class="bg-dark text-white text-center py-4 mt-auto">
       <p>&copy; 2025 Sandra Soledad Sanchez. Todos los derechos reservados.</p>
-      <p>
-        <a href="https://linkedin.com/in/sandrasanchez" class="text-white me-3">LinkedIn</a> |
-        <a href="https://github.com/sandrasanchez" class="text-white me-3">GitHub</a> |
-        <a href="https://instagram.com/sandrasanchez" class="text-white me-3">Instagram</a> |
-        <a href="#" class="text-white me-3">Discord</a> |
-        <a href="https://wa.me/5493855075058" class="text-white">WhatsApp</a>
-      </p>
-
+      <a name="redes">
+        <div class="redes-container">
+          <ul>
+            <li><a href="https://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li><a href="https://wa.me/5493855075058" class="whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="https://github.com" class="github"><i class="fab fa-github"></i></a>
+            </li>
+            <li><a href="https://discord.com/channels/@me" class="discord"><i class="fab fa-discord"></i></a>
+            </li>
+            <li><a href="https://www.linkedin.com/" class="linkedin"><i class="fab fa-linkedin"></i></li>
+          </ul>
+        </div>
+      </a>
     </footer>
   </div>
 
