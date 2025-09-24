@@ -397,30 +397,53 @@ div[id] {
     background: var(--linkedin);
 }
 
-/* 🎡 Carousel */
+/* CAROUSEL */
 .carousel-container {
-    background: #000;
+    background: transparent;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.carousel-inner,
+.carousel-item {
+    background-color: transparent !important;
+    transition: transform 0.6s ease-in-out;
 }
 
 .promo-content {
-    min-height: 45vh;
+    min-height: 300px;
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
 
 .promo-image {
-    max-height: 180px;
-    border-radius: 15px;
-    object-fit: cover;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    object-fit: container;
+    border-radius: 5px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
 }
 
-.old-price {
-    font-size: 0.9rem;
+.carousel-control-prev,
+.carousel-control-next {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
 
-.new-price {
-    color: var(--brand);
-    text-shadow: 0 0 6px rgba(255, 183, 3, 0.6);
+@media (max-width: 768px) {
+    .promo-content {
+        min-height: 30vh;
+        padding: 1rem;
+    }
+
+    .promo-image {
+        max-height: 220px;
+    }
 }
