@@ -30,6 +30,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// RECEPCIÓN DE CORREO ELECTRÓNICO
+const form = document.getElementById('contact-form');
+const status = document.getElementById('form-status');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch('https://formspree.io/f/mpwywkzl', {
+        method: 'POST',
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+
+    if (response.ok) {
+        status.textContent = '¡Mensaje enviado con éxito!';
+        form.reset();
+    } else {
+        status.textContent = 'Hubo un error al enviar el mensaje.';
+    }
+});
+
 // MENU MOVIL
 const toggle = document.getElementById('menuToggle');
 const icons = document.querySelectorAll('.icon-item');
