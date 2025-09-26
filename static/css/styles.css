@@ -242,6 +242,9 @@ div[id] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 4px solid #bfa23f;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
 .card-proyecto .row {
@@ -258,7 +261,7 @@ div[id] {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 0;
 }
 
 .card-proyecto .p-4 {
@@ -266,6 +269,7 @@ div[id] {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 
 /* MODALES */
