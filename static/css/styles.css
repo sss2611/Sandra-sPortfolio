@@ -507,3 +507,52 @@ div[id] {
         display: none !important;
     }
 }
+
+/* Desaparece la barra de Google */
+body>.skiptranslate {
+    display: none !important;
+}
+
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+#goog-gt-tt,
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+.goog-text-highlight {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* Ocultar completamente cualquier elemento de Google Translate */
+body.translated-ltr,
+body.translated-rtl {
+    top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.goog-te-gadget {
+    display: none !important;
+}
+
+iframe.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-gadget span {
+    display: none !important;
+}
+
+#google_translate_element {
+    display: none !important;
+}
